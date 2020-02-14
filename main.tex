@@ -1,5 +1,10 @@
 \documentclass[12pt]{article}
-
+\usepackage{float}
+\usepackage{tabularx}
+\usepackage{todonotes}
+\usepackage{color, colortbl}
+\definecolor{light-gray}{gray}{0.95}
+\setuptodonotes{disable}
 % This is all the packages and settings and so on.
 % It is using custom fonts that needs to be installed on the computer. If they are not present, they have to be added manually.
 \input{setup}
@@ -12,9 +17,9 @@
 % \addbibresource{ref-author-2.bib}
 
 % Defining document information
-\title{Template}
-\newcommand{\subtitle}{KTH Bachelor Thesis Report}
-\author{<Author Name and Author Name>}
+\title{ }
+\newcommand{\subtitle}{User Experience influenced model for comparing Progressive Web Applications and Native applications \newline}
+\author{\textbf{Mileikowsky, Celine \newline \newline Porling, Sebastian}}
 
 \begin{document}
 \setstretch{1.4}
@@ -29,8 +34,9 @@
 
 % The table of content
 \customtoc
-
-The content only includes the first level of sub-headings as the third level was less relevant in the scope of the entire report. This can be changed in the setup.tex file.
+ \iffalse
+%The content only includes the first level of sub-headings as the third level was less relevant in the scope of the entire report. This can be changed in the setup.tex file.
+\fi
 
 \pagenumbering{arabic}
 
@@ -45,9 +51,8 @@ The content only includes the first level of sub-headings as the third level was
 
 \newpage
 \addcontentsline{toc}{section}{References}
-\textbf{If you are using mendeley to manage references, you might have to export them manually in the end as the automatic ways removes the "date accessed" field}
+%\textbf{If you are using mendeley to manage references, you might have to export them manually in the end as the automatic ways removes the "date accessed" field}
 \printbibliography
-
 
 \include{sections/appendices}
 \include{back-cover}

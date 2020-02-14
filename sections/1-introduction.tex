@@ -1,92 +1,79 @@
 \section{Introduction}
 
-Provide a general introduction to the area for the degree project. Use references!
-
-Link things together with references. This is a reference to a section: \ref{sec:background}.
+The market for mobile applications is constantly evolving and changing, with new research being made in both performance and usability. With a growth in the market for mobile internet devices, the market has also diversified, leading to many different devices for mobile internet access being available. A problem that has arisen with this diversification is compatibility across these different platforms. Applications that work on one platform might not be functional on another, and companies are often forced to launch several different applications for different devices. \\
+Cross-platform development has produced several solutions for this problem, one of the newer ones being progressive web applications. Progressive web applications give the user access to more functions than a web application, while still maintaining cross-platform compatibility. 
 
 \subsection{Background}
-\label{sec:background}
-Present the background for the area. Give the context by explaining the parts that are needed to understand the degree project and thesis. (Still, keep in mind that this is an introductory part, which does not require too detailed description).
-
-Use references\footnote{You can also add footnotes if you want to clarify the content on the same page.}
-
-Detailed description of the area should be moved to Chapter 2, where detailed information about background is given together with related work. 
-
-This background presents background to writing a report in latex.
-
-
-Example citation \cite{Jones2017} or for two authors: \cite{Jones2017, Liu2017}
-
-Look at sample table \ref{tab:sample-table-label} for a table sample.
-
-\input{tables/sample-table}
-
-Boxes can be used to organize content
-
-\begin{tcolorbox}[title={Development environment for prototype}]
-	\tt{
-		\textbf{Operating systems }\\
-		computer: Linux - kernel 4.18.5-arch1-1-ARCH\\
-		android phone: 8.1.0\\
-		~\\
-		\textbf{Build tools}\\
-		exp (build tool): version 55.0.4\\
-		~\\
-		...
-	}
-\end{tcolorbox}
-
-
-Multiple images can be placed side by side like this:
-\begin{figure}[ht]
-	\centering 
-	\subfloat[First subfigure]{\includegraphics[width=0.3\textwidth]{img/sample-image}
-		\label{fig:sample-image:1}}
-	\hfill
-	\subfloat[Second subfigure]{\includegraphics[width=0.3\textwidth]{img/sample-image}
-		\label{fig:sample-image:2}}
-	\hfill
-	\subfloat[Third subfigure]{\includegraphics[width=0.3\textwidth]{img/sample-image}
-		\label{fig:sample-image:3}}
-	\caption{\textit{General figure caption. The width might not add up to 1. Try make sure it adds up to 0.9 instead.}}
-\end{figure}
+Progressive web applications (PWA) are web applications which are engaging since they can be added to the home screen, as well as fast and reliable since, just like native applications, they can be accessed without an internet connection \cite{PWAGoogle}. The benefit of developing a PWA instead of a native application lies in its reachability and cost-efficiency compared to developing separate native applications for different platforms. In this instance, native applications refer to applications written for the top two mobile platforms: iOS, using Swift or Object-C; and Android, using Kotlin or Java. Another solution to the platform issue is using a hybrid application, such as React Native. React Native is a mobile application framework which combines React, a JavaScript library, and native platform capabilities to develop applications for the most common platforms. \\
+With a hybrid or PWA application, only one application needs to be developed, and that application can be run on a plethora of platforms. However, this cross-platform compatibility comes with some compromises in functions. A PWA on an iPhone can for example not access push-notifications or advanced hardware, and on all platforms, the graphical design might differ from what is the norm for the platform. \\
+To find out how much of these compromises the end-user notice, a usability test was conducted. A usability test measures the functionality of a product and can be used to determine if a design or set of functions is understandable and intuitive to users. \\
+The findings from the usability test were used, in combination with the technical advantages and drawbacks of a PWA, to determine which type of application is beneficial to develop. By utilizing a Multiple-criteria decision-making model (MCDM model) the results from the usability tests, findings from literature studies and other criteria were compiled into a recommendation for an application.
 
 \subsection{Problem}
-Present the problems found in the area. Preferable use and end this section with a question as a problem statement.
 
-Use references
-Preferable, state the problem, to be solved, as a question. Do not use a question that can be answered with yes and/or no. 
+This study investigated the difference of user experience in PWA and native applications to answer:
+\begin{itemize}
+    \item Do users notice a difference between progressive web applications and native apps, and how much does the difference affect the user experience?
+\end{itemize}
+With these findings, combined with other factors, a model was built to answer the question:
+\begin{itemize}
+    \item Can a model accurately decide whether a PWA, a React Native or a native application is most favourable?
+\end{itemize}
+
+
 
 \subsection{Purpose}
-The purpose of the degree project/thesis is the purpose of the written material, i.e., the thesis. The thesis presents the work / discusses / illustrates and so on.
+Several studies have been made on mobile applications and web applications, but few have taken PWA into account.
+The purpose of this study was to define how using a PWA affects the user experience, and weigh that together with other factors into a decision model. The model is to be used as a tool to determine if a PWA, a React Native or a native application should be developed.
 
-It is not “The project is about” even though this can be included in the purpose. If so, state the purpose of the project after purpose of the thesis).
 
 \subsection{Goal}
-The goal means the goal of the degree project. Present following: the goal(s), deliverables and results of the project. 
+The goal was to develop a model for software developers that eases the process of choosing between different application development options. The model should use the customers’ and end-users’ preferences and demands as a basis and produce the most suitable option for a mobile application.
+
+
 
 \subsubsection{Benefits, Ethics and Sustainability}
-Describe who will benefit from the degree project, the ethical issues (what ethical problems can arise) and the sustainability aspects of the project.
+PWAs are overall easier, cheaper and faster to develop and launch than making two native applications, according to IT-consultants at the company Slagkryssaren AB. Making a model that helps the developers to choose a PWA at appropriate cases is therefore advantageous for both the customer and the end-user.
+The data that was collected from the usability tests and surveys was to be handled in a way that it could not be accessed or used by any other parties than the authors of this project. The data was to be presented in a way that anonymizes the test subjects.
 
-Use references!
 
 \subsection{Methodology}
-Introduce, theoretically, the methodologies and methods that can be used in a project and, then, select and introduce the methodologies and methods that are used in the degree project. Must be described on the level that is enough to understand the contents of the thesis. 
 
-Use references!
+\subsubsection{Multi-criteria decision-making}
+The model itself was based on the MCDM method. The MCDM uses a mathematical function to calculate the best alternative when faced with a decision involving many different criteria. The decision-makers decide which criteria are important and rank them. The possible alternatives are then scored on each criterion. The alternative with the highest score is then the best alternative for that decision-makers ranking. A very common method for the MCDM is the Weighted Sum Model (WSM). The WSM sums the ranking of the criteria, multiplied by each alternatives’ score, to calculate which alternative is most suitable. This requires the data to be quantifiable.\\
+Another popular method is the Analytical Hierarchy Process, which works by doing a pair-wise comparison of each criterion. One flaw with this method is that it’s not very good at dealing with many criteria, as the decision-maker has to remember what they decided on previous comparisons and why, or else they risk making contradictory rankings.
+\subsubsection{Mobile appliaction development methods}
+The differences between PWA, React Native and native applications when it comes to functions, budget, maintenance etc. were investigated through interviews and discussions with software developers. A literature study was performed to investigate how performance, security and other criteria are affected by the choice of the type of mobile application.
+To see the differences in user experience, usability tests were conducted. During the tests, PWA and native applications would have the main focus. React Native and PWA both use Javascript but React Native can access native user interface components, meaning it will be a mixture of both types. To be able to make the usability tests we would have needed a similar app developed with all methods, something that was not available at that moment, and outside of the scope of this study to develop.  
+\subsubsection{User experience}
+There are several ways to test a solution’s usability. One could conduct at-home testing, where the test subjects use the application on their own time and then report back to the researcher how they feel about the product they have tested. This method is useful when it is vital to the test that the product is tested during a specific time or activity, in a specific place or over a longer time span. With this method there is however a delay in receiving feedback from the test subjects. \\
+There is also the option of A/B testing where the test subjects, in a controlled environment, get to test out two (or more) versions of the same product. After the test, the subjects rate the solutions and communicate their preference. This method is good for choosing between two alternatives. This could for example be two different graphical elements, or two different wordings. A/B testing most useful when there are specific differences in the versions of the product, and not when the versions are highly different. \\
+Group discussions, such as focus groups, are also an option for usability testing. A number of subjects get to sit together and review the products. When there are plenty of test subjects to utilize, this is an efficient way to get several people’s opinions at the same time. However, for a first-hand experience test, it demands that there are enough devices to test on and resources to capture all participants’ thoughts and feelings. \\
+Comparative usability testing is another alternative for conducting a usability test. A subject gets to test a product in front of the researcher, and the researcher notes the subject’s reactions to the product. A comparative usability test can either test several versions on the same test subject, or test each version separately. This method was chosen for this project, as it is resource-efficient and only demands one device to test on. It is also relatively robust, as the tests are performed separately on different subjects, small errors will not affect the final outcome. The test subjects would test both applications, to maximize the input from the subjects on each version.
 
-Preferably, the philosophical assumptions, research methods, and research approaches are presented here. Write quantitative / qualitative, deductive / inductive / abductive. Start with theory about methods, choose the methods that are used in the thesis and apply. 
+To build a model which takes usability into account, the comparative usability test was conducted. This inductive approach would produce qualitative data. The different solutions tested in a comparative usability test can be tested either separately on the different test subject, or together on the same subjects. Both solutions were tested on all the test subjects. A drawback with this method was that there could emerge a pattern that the user would like a particular version if they are tested in the same order \cite{Ross2017}. To counteract this effect the subjects tested the applications in varying order so that the bias would have the same impact in both directions. This was done since the scope of the project is comparatively small, meaning the benefit of more test subjects was vital. \\
+To make the results as comparable as possible, we chose to have all the test subjects perform the same set of tasks. The tests were conducted on the same OS that the test subject normally used, in order to minimize confusion due to an unknown platform. 
+For the model, it was also relevant to include application exploration as a criterion. To acquire quantitative data for the finding and downloading habits of the population, a cross-sectional survey was conducted. This gave data from a more diverse population than is possible from qualitative methods, such as interviews, in the time span of the project. 
 
-
-Detailed description of these methodologies and methods should be presented in Chapter 3. In chapter 3, the focus could be research strategies, data collection, data analysis, and quality assurance.
-
+To see the differences in quality, usability, attractiveness and other criteria which are important for the product from the end-users point of view, validation of the tests was done using surveys. These surveys were conducted after each test for the applications. Several ranking methods exist, such as the System Usability Scale (SUS), the Usability Experience Questionnaire (UEQ), Net Promoter Score and the Standardized User Experience Percentile Rank Questionnaire. These surveys are popular for measuring how good the different applications are in certain criteria\cite{Rauschenberger2013, Kortum2014}. The surveys can only receive quantifiable data. In order to get richer, more nuanced comparisons between the different applications, we complemented the data with unstructured interviews after the tests.
 
 \subsection{Stakeholders}
-Present the stakeholders for the degree project.
+
+The model created was designed for the company Slagkryssaren AB. \\
+Slagkryssaren AB is a tech agency that specializes in mobile platforms, back-end, cloud computing, artificial neural network technologies and software architecture. With this model, they would be able to help their clients to choose an appropriate product that fits their needs more easily. Slagkryssaren AB would supply with their expertise and experience when it comes to choosing what criteria that are important, and how they usually conduct a decision for choosing between the different technologies.
 
 \subsection{Delimitations}
-Explain the delimitations. These are all the things that could affect the study if they were examined and included in the degree project. 
-Use references!
+The most restrictive resource for this project was time, meaning there were some delimitations. Only PWA, React Native and native developing were included in the final results. There are many more hybrid solutions for making mobile applications, and there was not time to compare all of them. 
+The smartphones that were looked into were Android and iOS devices. The devices were not the test subjects’ own device, so there was a risk of them having to deal with a different layout than they are used to.
+The usability tests was limited by demographic and number of participants, as each test required a lot of planning, execution and analysis. The tests were limited by being performed in Stockholm only. The tests were not performed online, so our participants had to be present physically during office hours, which limited the number of participants with day-time occupations. 
+
 
 \subsection{Outline}
-In text, describe what is presented in Chapters 2 and forward. Exclude the first chapter and references as well as appendix. 
+
+\begin{itemize}
+    \item Chapter 2 will take on the background of the different technologies, usability testing and the MCDM.
+    \item Chapter 3 will take on how we will conduct the literature study, the survey, usability testing and how we will be designing and implementing the MCDM.
+    \item Chapter 4 will take on the different steps in implementing the MCDM, what was found in the literature and case study, and showing the time-line of the usability testing.
+    \item Chapter 5 will show the result and explain the reasoning for choosing the different criteria.
+    \item Chapter 6 will be the conclusion and discussion of this study. This shows what could be done differently and what future work could be done.
+\end{itemize}
