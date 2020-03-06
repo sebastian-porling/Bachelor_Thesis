@@ -1,0 +1,61 @@
+\section{ Discussions }
+
+This chapter presents the research questions and methodically goes through how well they were answered. After this, a discussion on how each part of the project could have been done differently to improve the accuracy of the results takes part. 
+
+\subsection{Discussion}
+
+The scope of this project was the only non-constant variable for affecting the quality. To get useful results from the usability tests, it was planned to perform 20 tests at least. Only 18 tests were conducted, as it was harder to find test subjects than we thought, and also to have time to properly analyze the material from the tests and implement the model. However, after 18 tests were conducted, the time planned for the usability tests was up. It was apparent that some parts of the data would not be improved with just a few more tests, but would require a much larger study. 
+
+\subsubsection{Mobile application discovery survey}
+
+As presented in Chapter \ref{section:research_methodology} the task of finding mobile applications was answered using a survey. The mobile application discovery survey was filled in by 94 persons. The ages ranged between 20 and 73, a more realistic outcome of the survey could probably be reached if it had included those below 20 as well. The survey was distributed in social media only, limiting the reach of the participants. A survey spread through other types of media as well would increase the scope and improve the results. 
+
+After the survey was conducted, the following questions were found to be poorly worded:
+
+\begin{itemize}
+    \item \textit{"You just heard about a new smartphone application (app). Where do you turn when you want to find information about the app?"}
+    \item \textit{"You just heard about a new smartphone application (app). Where do you turn when you want to download the app?"}
+\end{itemize}
+
+A better formulation would have been as follows:
+
+\begin{itemize}
+    \item \textit{"You are searching for new smartphone applications (apps). Where do you turn when you want to find information about the apps?"} 
+    \item \textit{"You are searching for new smartphone applications (apps). Where do you turn when you want to download the apps?"}.
+\end{itemize}
+
+This might have improved the accuracy of the survey as the desired statistics was on how people find \textit{new} applications, and the way the questions were asked it could be interpreted as the question being about known applications. 
+
+For the data collected to be useful in any statistical context it would have required that some more information on the participants was collected. It would be useful to know how knowledgeable the subject is on new technology, how much the subject uses their smartphone, level of education and occupation. Knowing this, one could compensate for a skewered participant population compared to the general population.
+
+\subsubsection{Usability test}
+
+As presented in Chapter \ref{section:research_methodology} the task of UX was investigated through usability testing.
+The results of the usability tests suggest that there was a difference in how a user perceives a PWA and a native application, and that overall the native application was preferred. Two out of the five included aspects of the usability test UEQ had results which were statistically significant, even on the relatively small amount of participants used in this survey, indicating that the difference is substantial enough to affect the users experience of the application. 
+
+The usability tests were conducted during office hours, and the participants were recruited through university campus channels. This resulted in the participants almost exclusively being students at a technological institute. The tests were conducted in Slagkryssaren ABs office in the beginning but were later moved to the campus of the university. This was done to ease the process of recruitment, as holding the tests in the office resulted in added travelling time for the student participants. It also opened up for the possibility of having drop-in times for participating, instead of having to book a time in advance.
+
+The age range was also limited to young adults between 20 and 30 years old. This means the participants were likely more experienced and comfortable using new mobile software than the average person. An improved result could have been achieved if there was a wider demographics of participants, which would demand that the tests be performed outside of office hours and in several different locations. Recruitment could have been performed on several different platforms, targeting harder-to-reach demographics. The participants were compensated for their time in a goodie-bag consisting of candy. Monetary compensation could have attracted more participants, but there were no funds for such compensations in this study.
+
+There were some technical limitations to the usability test. The iOS device used was a relatively new iPhone 11 Pro, whereas the Android device was an older OnePlus 5. There were no newer Android devices available to test on, so the iPhone used for the tests had noticeably better performance than the Android device. Due to the low performance of the Android device, it was possible the PWA was given a disadvantage compared to how it would perform in real life on most users' personal devices. This did, however, give a good insight into how a PWA might perform on a lower-end or older device.  An ideal scenario would have been to use one newer and one older device from each platform, with comparable performance.
+
+There were also some technical difficulties to take into consideration. During one of the tests, the WiFi-connection was down, forcing the moderator to intervene which might have affected the test subject's impression of the PWA negatively. A stable, monitored internet connection would have prevented these problems. For a few of the tests, some parts were not captured on camera from behind, meaning the device's screen was not shown. This was due to the difficulty in recording and charging the camera simultaneously, resulting in the camera running out of battery.
+
+Since the test conductors were each responsible for one of the two platforms, one person got to practice moderating and the other recording more. This affected the quality of the written material and the instruction-giving for the test subjects. This could have been avoided if the same person had been moderator or recorder for every test, but since the conductors were not experienced with the other device this was not optimal for this test. Screen recording and eye-tracking technology could have eliminated the need for a recorder, which would improve the accuracy of the material. With recorded material mainly in the form of notes made by a human, there is always the risk of a bias towards one of the products. With the limited time frame and finances of this study, it was not possible to gather and process the amount of material that would be produced by implementing these technical solutions.
+
+Due to time limitations, the recorded material could not be processed in detail. Instead, the written material compiled at the tests was used as a base for the qualitative data, and when there were uncertainties in the written material the video recordings were reviewed for clarity.
+
+The test conductors had limited experience in the field of Human-computer interaction. There is a risk that useful material from the usability tests was overlooked or misinterpreted due to lack of experience. 
+
+\subsubsection{Decision model}
+
+As presented in Chapter \ref{section:research_methodology} the tasks deriving from the research question of implementing a model were investigated through conducting literature and case studies. That information would then be used for the process of designing, implementing and evaluating the model.
+The decision model was implemented with WSM. It is possible a version of AHP would have produced different results, as it would force a more polarizing opinion from the decision-maker. For an AHP implementation, the criteria would have to be re-evaluated, as the complexity of the AHP increases with every new criterion added. 
+
+Some studies on the performance aspect of PWAs exist, but it was hard to decide on a clear number of how good or bad it was compared to native applications. The performance of an application, regardless of the development method, is highly dependent on how the application is coded. A well-coded PWA could perform better than a native application with poor implementation. For the model used in this study, what would be considered a well-implemented native application was taken into consideration when setting scores and compared to a well-implemented PWA. How well this model translates to real life was uncertain, as trying to compare how well applications are implemented was a very complex task.
+
+The Budget criterion was highly simplified. Many factors not included in the model could affect the economical aspects of choosing a development method, including the revenue model of the business and the effect of improved search engine optimization.
+
+Overall it was difficult to quantify the scores for the model. This resulted in the scores being set partly on a trial-and-error basis. A possible solution to this would have been to use a Knowledge-Based System (KBS) to build the model. A KBS uses artificial intelligence to predict which solution is most advantageous, comparing an input to the input from several other solved scenarios. This could give a solution which is correct with a certain probability, which would increase when more scenarios are run through the model and evaluated. The KBS bypasses the need for quantification, eliminating the risk of a faulty score affecting the outcome of the model \cite{Brent1986}.
+
+The decision model for React Native specifically was limited by the complexity of the available functions. React Native can behave similarly to a native application if implemented with the proper wrappers, but different functions have different limitations and opportunities. We decided to instead just raise the score on Functions to a level agreed on by the developers at Slagkryssaren AB to be an appropriate approximation of a React Native applications functionality.

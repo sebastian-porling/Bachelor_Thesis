@@ -1,79 +1,104 @@
 \section{Introduction}
 
-The market for mobile applications is constantly evolving and changing, with new research being made in both performance and usability. With a growth in the market for mobile internet devices, the market has also diversified, leading to many different devices for mobile internet access being available. A problem that has arisen with this diversification is compatibility across these different platforms. Applications that work on one platform might not be functional on another, and companies are often forced to launch several different applications for different devices. \\
-Cross-platform development has produced several solutions for this problem, one of the newer ones being progressive web applications. Progressive web applications give the user access to more functions than a web application, while still maintaining cross-platform compatibility. 
+This chapter gives a short introduction and background of the area. It provides what problem will be solved and what the purposes and goals are for the study that will be conducted. It introduces the research methodologies that will be used, along with the stakeholders and this study's delimitations. Finally, it goes through the structure of the report as a whole.
 
 \subsection{Background}
-Progressive web applications (PWA) are web applications which are engaging since they can be added to the home screen, as well as fast and reliable since, just like native applications, they can be accessed without an internet connection \cite{PWAGoogle}. The benefit of developing a PWA instead of a native application lies in its reachability and cost-efficiency compared to developing separate native applications for different platforms. In this instance, native applications refer to applications written for the top two mobile platforms: iOS, using Swift or Object-C; and Android, using Kotlin or Java. Another solution to the platform issue is using a hybrid application, such as React Native. React Native is a mobile application framework which combines React, a JavaScript library, and native platform capabilities to develop applications for the most common platforms. \\
-With a hybrid or PWA application, only one application needs to be developed, and that application can be run on a plethora of platforms. However, this cross-platform compatibility comes with some compromises in functions. A PWA on an iPhone can for example not access push-notifications or advanced hardware, and on all platforms, the graphical design might differ from what is the norm for the platform. \\
-To find out how much of these compromises the end-user notice, a usability test was conducted. A usability test measures the functionality of a product and can be used to determine if a design or set of functions is understandable and intuitive to users. \\
-The findings from the usability test were used, in combination with the technical advantages and drawbacks of a PWA, to determine which type of application is beneficial to develop. By utilizing a Multiple-criteria decision-making model (MCDM model) the results from the usability tests, findings from literature studies and other criteria were compiled into a recommendation for an application.
+
+The market for mobile applications is constantly evolving and changing, with new research being made in both performance and usability. With a growth in the market for mobile internet devices, the market has also diversified, leading to many different devices for mobile internet access being available. For a mobile application to penetrate the market properly, it needs to be available across all popular mobile device platforms. 
+
+Progressive web applications provide this important cross-platform compatibility \cite{PWAGoogle} without the need to develop several applications. 
+Progressive web applications (PWA) are web applications which are engaging since they can be added to the home screen, as well as fast and reliable since, just like native applications, they can be accessed without an internet connection \cite{PWAGoogle}. The benefit of developing a PWA instead of a native application lies in its reachability and cost-efficiency compared to developing separate native applications for several platforms. Native applications refers to applications written for the top two mobile platforms: iOS, using Swift or Object-C; and Android, using Kotlin or Java. 
+
+Another solution to the platform issue is using a hybrid application, such as React Native. React Native is a mobile application framework which combines React, a JavaScript library, and native platform capabilities to develop applications for the most common platforms.
+
+With a PWA or hybrid application, only one application needs to be developed, and that application can be run on a plethora of platforms. However, this cross-platform compatibility comes with some compromises in functions. A PWA on an iPhone can for example not access push-notifications or advanced hardware, and on all platforms, the graphical design might differ from what is the norm for the platform.
 
 \subsection{Problem}
+A problem that has arisen with the diversification of the market is compatibility across the different mobile device platforms. Applications that work on one platform might not be functional on another, and companies are often forced to launch several different applications for different devices. 
+A PWA solves this problem, as a developer only has to develop one application, and that application can be run on all platforms. There are, however, some performance issues with a PWA. 
+To find out how much compromises in performance of a PWA the end-user notice, user experience was tested.
 
-This study investigated the difference of user experience in PWA and native applications to answer:
+The user experience effects of choosing the different development tools was combined with the technical advantages and drawbacks of the different application development tools to determine which type of application was beneficial to develop in a specific case.
+
+This study investigated the difference of user experience in PWAs and native applications to answer the following questions:
+
 \begin{itemize}
-    \item Do users notice a difference between progressive web applications and native apps, and how much does the difference affect the user experience?
+    \item Do users notice a difference between progressive web applications and native applications, and does the difference affect the user experience?
 \end{itemize}
+
 With these findings, combined with other factors, a model was built to answer the question:
+
 \begin{itemize}
-    \item Can a model accurately decide whether a PWA, a React Native or a native application is most favourable?
+    \item Can a model accurately decide whether a PWA, a React Native application or a native application is most favourable?
 \end{itemize}
-
-
 
 \subsection{Purpose}
-Several studies have been made on mobile applications and web applications, but few have taken PWA into account.
-The purpose of this study was to define how using a PWA affects the user experience, and weigh that together with other factors into a decision model. The model is to be used as a tool to determine if a PWA, a React Native or a native application should be developed.
 
+Several studies have been made on mobile applications and web applications, but few have taken PWA into account.
+The purpose of this study was to define how using a PWA affects the user experience, and weigh that together with other factors into a decision model. The model was to be used as a tool to determine if a PWA, a React Native application or a native application should be developed.
 
 \subsection{Goal}
-The goal was to develop a model for software developers that eases the process of choosing between different application development options. The model should use the customers’ and end-users’ preferences and demands as a basis and produce the most suitable option for a mobile application.
 
-
+The goal was to develop a model for software developers that eases the process of choosing between different application development options. The model should use the customers’ and end-users’ preferences and demands as a basis and produce the most suitable option for a mobile application development tool.
 
 \subsubsection{Benefits, Ethics and Sustainability}
-PWAs are overall easier, cheaper and faster to develop and launch than making two native applications, according to IT-consultants at the company Slagkryssaren AB. Making a model that helps the developers to choose a PWA at appropriate cases is therefore advantageous for both the customer and the end-user.
-The data that was collected from the usability tests and surveys was to be handled in a way that it could not be accessed or used by any other parties than the authors of this project. The data was to be presented in a way that anonymizes the test subjects.
 
+The impact of this study was analyzed using the four pillars of sustainability \cite{FourSustainabilityPillars2017}. The UN Sustainable Development Goals  \cite{UNSustainabilityGoals} were reviewed for the planning of this study.
+
+\paragraph{Human sustainability} 
+
+The data that was collected from the usability tests and surveys was to be handled in a way that it could not be accessed or used by any other parties than the authors of this study. The data was to be presented in a way that anonymizes the test subjects.
+
+\paragraph{Social sustainability}
+
+Products being available on all mobile platforms would improve the mobile connectivity aspect of the UN Sustainable Development number 9 Industry, innovation and infrastructure \cite{UNSustainabilityGoals}. This effect, however, was not massive as the technology for these development techniques already exists. 
+
+\paragraph{Economic sustainability}
+
+PWAs are overall easier, cheaper and faster to develop and launch than making two native applications, according to IT-consultants at the company Slagkryssaren AB. Making a model that helps the developers to choose a PWA at appropriate cases was therefore advantageous for the customer, and possibly the end-user.
+
+\paragraph{Environmental sustainability}
+
+This study did not have any foreseeable effects on environmental sustainability. The application development does not change the environmental impact of the application in any way noteworthy.
 
 \subsection{Methodology}
 
-\subsubsection{Multi-criteria decision-making}
-The model itself was based on the MCDM method. The MCDM uses a mathematical function to calculate the best alternative when faced with a decision involving many different criteria. The decision-makers decide which criteria are important and rank them. The possible alternatives are then scored on each criterion. The alternative with the highest score is then the best alternative for that decision-makers ranking. A very common method for the MCDM is the Weighted Sum Model (WSM). The WSM sums the ranking of the criteria, multiplied by each alternatives’ score, to calculate which alternative is most suitable. This requires the data to be quantifiable.\\
-Another popular method is the Analytical Hierarchy Process, which works by doing a pair-wise comparison of each criterion. One flaw with this method is that it’s not very good at dealing with many criteria, as the decision-maker has to remember what they decided on previous comparisons and why, or else they risk making contradictory rankings.
-\subsubsection{Mobile appliaction development methods}
-The differences between PWA, React Native and native applications when it comes to functions, budget, maintenance etc. were investigated through interviews and discussions with software developers. A literature study was performed to investigate how performance, security and other criteria are affected by the choice of the type of mobile application.
-To see the differences in user experience, usability tests were conducted. During the tests, PWA and native applications would have the main focus. React Native and PWA both use Javascript but React Native can access native user interface components, meaning it will be a mixture of both types. To be able to make the usability tests we would have needed a similar app developed with all methods, something that was not available at that moment, and outside of the scope of this study to develop.  
+The research questions for this study were\textit{ "Do users notice a difference between progressive web applications and native applications and does the difference affect the user experience?"}
+and \textit{"Can a model accurately decide whether a PWA, a React Native application or a native application is most favourable?".}
+
+These questions could be divided into two research sections: User experience and Designing a model.
+
 \subsubsection{User experience}
-There are several ways to test a solution’s usability. One could conduct at-home testing, where the test subjects use the application on their own time and then report back to the researcher how they feel about the product they have tested. This method is useful when it is vital to the test that the product is tested during a specific time or activity, in a specific place or over a longer time span. With this method there is however a delay in receiving feedback from the test subjects. \\
-There is also the option of A/B testing where the test subjects, in a controlled environment, get to test out two (or more) versions of the same product. After the test, the subjects rate the solutions and communicate their preference. This method is good for choosing between two alternatives. This could for example be two different graphical elements, or two different wordings. A/B testing most useful when there are specific differences in the versions of the product, and not when the versions are highly different. \\
-Group discussions, such as focus groups, are also an option for usability testing. A number of subjects get to sit together and review the products. When there are plenty of test subjects to utilize, this is an efficient way to get several people’s opinions at the same time. However, for a first-hand experience test, it demands that there are enough devices to test on and resources to capture all participants’ thoughts and feelings. \\
-Comparative usability testing is another alternative for conducting a usability test. A subject gets to test a product in front of the researcher, and the researcher notes the subject’s reactions to the product. A comparative usability test can either test several versions on the same test subject, or test each version separately. This method was chosen for this project, as it is resource-efficient and only demands one device to test on. It is also relatively robust, as the tests are performed separately on different subjects, small errors will not affect the final outcome. The test subjects would test both applications, to maximize the input from the subjects on each version.
 
-To build a model which takes usability into account, the comparative usability test was conducted. This inductive approach would produce qualitative data. The different solutions tested in a comparative usability test can be tested either separately on the different test subject, or together on the same subjects. Both solutions were tested on all the test subjects. A drawback with this method was that there could emerge a pattern that the user would like a particular version if they are tested in the same order \cite{Ross2017}. To counteract this effect the subjects tested the applications in varying order so that the bias would have the same impact in both directions. This was done since the scope of the project is comparatively small, meaning the benefit of more test subjects was vital. \\
-To make the results as comparable as possible, we chose to have all the test subjects perform the same set of tasks. The tests were conducted on the same OS that the test subject normally used, in order to minimize confusion due to an unknown platform. 
-For the model, it was also relevant to include application exploration as a criterion. To acquire quantitative data for the finding and downloading habits of the population, a cross-sectional survey was conducted. This gave data from a more diverse population than is possible from qualitative methods, such as interviews, in the time span of the project. 
+To understand the user experience differences between PWAs and native applications, the differences between the development methods had to be investigated, along with the experienced differences when using the applications. 
+To get this understanding, end-users tested applications made with both tools and provide feedback. The opinions of experts within the area combined with research and literature previously done on similar subjects had to be investigated.  
 
-To see the differences in quality, usability, attractiveness and other criteria which are important for the product from the end-users point of view, validation of the tests was done using surveys. These surveys were conducted after each test for the applications. Several ranking methods exist, such as the System Usability Scale (SUS), the Usability Experience Questionnaire (UEQ), Net Promoter Score and the Standardized User Experience Percentile Rank Questionnaire. These surveys are popular for measuring how good the different applications are in certain criteria\cite{Rauschenberger2013, Kortum2014}. The surveys can only receive quantifiable data. In order to get richer, more nuanced comparisons between the different applications, we complemented the data with unstructured interviews after the tests.
+\subsubsection{Designing a model}
+
+To build a decision model, which criteria are important to the decision had to be established. 
+When these criteria were established, how well the different development tools perform on said criteria had to be determined. A method for choosing a development tool had to be decided on and implemented. 
+
+The model implemented with the chosen method was to be evaluated and improved upon until it produced accurate outcomes.
 
 \subsection{Stakeholders}
 
-The model created was designed for the company Slagkryssaren AB. \\
-Slagkryssaren AB is a tech agency that specializes in mobile platforms, back-end, cloud computing, artificial neural network technologies and software architecture. With this model, they would be able to help their clients to choose an appropriate product that fits their needs more easily. Slagkryssaren AB would supply with their expertise and experience when it comes to choosing what criteria that are important, and how they usually conduct a decision for choosing between the different technologies.
+The model created was designed for the company Slagkryssaren AB.
+Slagkryssaren AB is a tech agency that specializes in mobile platforms, back-end programming, cloud computing, artificial neural network technologies and software architecture. With this model, they would be able to help their clients choose an appropriate product that fits their needs more easily. Slagkryssaren AB supplied with their expertise and experience when it comes to choosing what criteria are important, how they usually conduct a decision for choosing between the different technologies and the business perspective of the decision.
 
 \subsection{Delimitations}
-The most restrictive resource for this project was time, meaning there were some delimitations. Only PWA, React Native and native developing were included in the final results. There are many more hybrid solutions for making mobile applications, and there was not time to compare all of them. 
-The smartphones that were looked into were Android and iOS devices. The devices were not the test subjects’ own device, so there was a risk of them having to deal with a different layout than they are used to.
-The usability tests was limited by demographic and number of participants, as each test required a lot of planning, execution and analysis. The tests were limited by being performed in Stockholm only. The tests were not performed online, so our participants had to be present physically during office hours, which limited the number of participants with day-time occupations. 
 
+The most restrictive resource for this study was time. Only PWA, React Native and native developing were included in the final results. There are at the time of writing many more hybrid solutions for making mobile applications, and there was not time to compare all of them. 
+
+The smartphones that were looked into were running the two most popular operating systems in Sweden \cite{MarketShareSweden2020}, Android and iOS devices. The device was not the test subjects’ own device, so there was a risk of them having to deal with a different layout than they are used to. 
+
+The usability tests was limited by demographic and number of participants, as each test required a lot of time for planning, execution and analysis. The tests were limited by being performed in Stockholm only. The tests were not performed online, so our participants had to be present physically during office hours, which limited the number of participants with day-time occupations. 
 
 \subsection{Outline}
 
 \begin{itemize}
-    \item Chapter 2 will take on the background of the different technologies, usability testing and the MCDM.
-    \item Chapter 3 will take on how we will conduct the literature study, the survey, usability testing and how we will be designing and implementing the MCDM.
-    \item Chapter 4 will take on the different steps in implementing the MCDM, what was found in the literature and case study, and showing the time-line of the usability testing.
-    \item Chapter 5 will show the result and explain the reasoning for choosing the different criteria.
-    \item Chapter 6 will be the conclusion and discussion of this study. This shows what could be done differently and what future work could be done.
+    \item Chapter 2 addresses the background of the different technologies, usability testing and decision-making methods.
+    \item Chapter 3 explains in detail how the study will be carried out. This includes how to gather relevant information, how to test user experience and how to design and implement a decision-method.
+    \item Chapter 4 addresses the different steps in implementing the decision-method, show what was found in the literature and case study, and show the time-line of the user experience tests.
+    \item Chapter 5 presents the result and explain the reasoning for choosing the different criteria.
+    \item Chapter 6 presents the conclusion and discussion of this study. This shows what could have been done differently and what future work could be performed.
 \end{itemize}
